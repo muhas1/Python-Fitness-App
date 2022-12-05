@@ -1,0 +1,63 @@
+*{
+    padding: 5px;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+
+}
+
+body {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-image: url(https://cdn.pixabay.com/photo/2015/09/06/01/00/surfing-926822_960_720.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+nav {
+    background: rgba(0,0.5);
+    height: 80px;
+    width: 100%;
+}
+
+label.logo {
+    color: rgb(0, 0, 0);
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0px 100px;
+    font-weight: bold;
+}
+
+nav ul {
+    float:right;
+    margin-right: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 17px;
+    text-transform: uppercase;
+}
+
+button {
+    background-color: #0082e6; /* Green */
+    border:black;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  button:hover {
+    background-color: #000000; /* Green */
+    color: white;
+  }

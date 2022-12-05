@@ -20,6 +20,11 @@ def checkLogin(username,password):
         closeConnect()
         return False
 
+def addMeal(mealID,calories,protein,carbs,fat,TRUserID):
+    c.execute("INSERT INTO meal(protein,calories,carbs,fat,TR_userID,mealName) VALUES (?,?,?,?,?,?)",
+        [protein,calories,carbs,fat,TRUserID,mealID]
+    )
+    closeConnect()
 
 def closeConnect():
     connection.commit()

@@ -1,1 +1,22 @@
-<h1> balls </h1>
+
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="{{ url_for('static',filename='home.css')}}">
+</head>
+<body>
+    <div>
+        <nav>
+            <label class="logo">CPSC 471</label>
+            <ul>
+                <form action="/home" method="POST">
+                    <li><button type="submit" name="menu" value="meals">Meals</button></li>
+                    <li><button>Exercises</button></li>
+                    <li><button>Trainers</button></li>
+                    <li><button>Personal Information</button></li>
+                </form>
+            </ul>
+        </nav>
+    </div>
+</body>
+</html>
