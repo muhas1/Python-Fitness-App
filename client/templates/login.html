@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="{{ url_for('static',filename='Credentials.css')}}">
+</head>
+<body>
+    <div class="topContainer">
+        <div class="section">
+            <div class="container">
+                <div class="row full-height justify-content-center">
+                    <div class="col-12 text-center align-self-center py-5">
+                        <div class="section pb-5 pt-5 pt-sm-2 text-center">
+                            <h6 class="balls"><span>Log In </span><span>Sign Up</span></h6>
+                            <input class="checkbox" type="checkbox" id="reg-log" name="reg-log"/>
+                            <label for="reg-log"></label>
+                            <div class="card-3d-wrap mx-auto">
+                                <div class="card-3d-wrapper">
+                                    <div class="card-front">
+                                        <div class="login-box">
+                                            <h2>Login</h2>
+                                            <form action="/" method="POST">
+                                                <div class="user-box">
+                                                    <input type="text" name="username" required=""/>
+                                                    <label>Username</label>
+                                                </div>
+                                                <div class="user-box">
+                                                    <input type="password" name="password" required=""/>
+                                                    <label>Password</label>
+                                                </div>
+                                                <button class='loginbutton' type="submit">
+                                                    <a>
+                                                        <span></span>
+                                                        <span></span>
+                                                        Login
+                                                    </a>
+                                                </button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="card-back">
+                                    <div class="login-box">
+                                            <h2>Sign Up</h2>
+                                            <form action="/" method="POST">
+                                                <div class="user-box">
+                                                    <input type="text" name="fName" required=""/>
+                                                    <label>First Name</label>
+                                                </div>
+                                                <div class="user-box">
+                                                    <input type="text" name="lName" required=""/>
+                                                    <label>Last Name</label>
+                                                </div>
+                                                <div class="user-box">
+                                                    <input type="text" name="user" required=""/>
+                                                    <label>Username</label>
+                                                </div>
+                                                <div class="user-box">
+                                                    <input type="password" name="pass" required=""/>
+                                                    <label>Password</label>
+                                                </div>
+                                                <button class="loginbutton" type="submit" name="submission" value="signup">
+                                                    <a>
+                                                        <span></span>
+                                                        <span></span>
+                                                        Sign Up
+                                                    </a>
+                                                </button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>
