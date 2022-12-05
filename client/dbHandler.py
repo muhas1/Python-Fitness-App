@@ -11,9 +11,15 @@ def createLogin(username,password,firstName,lastName):
     closeConnect()
 
 
+def checkLogin(username,password):
+    c.execute("SELECT traineeID FROM trainee WHERE ( email == (?) AND password == (?) )",[username,password])
+    if (len(c.fetchall()) == 1):
+        closeConnect()
+        return True
+    else:
+        closeConnect()
+        return False
+
+
 def closeConnect():
     connection.commit()
-    connection.close()
-
-if __name__ == "__main__":
-    createLogin("muhment@gmail.com","muhment123","Muha","Shah")

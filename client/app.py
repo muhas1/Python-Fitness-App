@@ -16,7 +16,12 @@ def login():
             createLogin(user,pass1,fName,lName)
             return render_template('home.html')
         if request.form['submission'] == 'login':
-            return "MEN"
+            username = request.form['username']
+            password = request.form['password']
+            if checkLogin(username,password):
+                return "CORRECT"
+            else:
+                return "FALSE"
     return render_template('login.html')
 
 if __name__ == '__main__':
