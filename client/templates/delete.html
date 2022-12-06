@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html> 
+<body> 
+<h2> Update/Delete </h2>
+    
+<form action="/delete" method="POST">
+    <h3> Update Meal </h3> 
+    <label for = "mealID"> Meal ID: </label>
+    <input type = "text" id = "mealID" name = "mealID">
+    <label for = "calories"> Calories: </label>
+    <input type = "text" id = "calories" name = "calories">
+    <label for = "protein"> Protein: </label>
+    <input type = "text" id = "protein" name = "protein">
+    <label for = "carbs"> Carbs: </label>
+    <input type = "text" id = "carbs" name = "carbs">
+    <label for = "fat"> Fat: </label>
+    <input type = "text" id = "fat" name = "fat">
+    <label for = "mealName"> Meal Name: </label>
+    <input type = "text" id = "mealName" name = "mealName">
+
+    <button type = "submit" name="update" value="updateMeal"> Update </button>
+</form>
+
+<form action="/delete" method="POST"> 
+    <h3> Delete Meal </h3> 
+    <label for = "mealID"> Meal ID: </label>
+    <input type = "text" id = "mealID" name = "mealID">
+
+    <button type = "submit" name="update" value="deleteMeal"> Delete </button>
+    
+
+</form>
+
+<form action="/delete" method="POST"> 
+    <h3> Update Exercise</h3>
+    <label for = "exName"> Exercise Name: </label> 
+    <input type = "text" id = "exName" name = "exName">
+    <label for = "muscleGroup"> Muscle Group: </label> 
+    <input type = "text" id = "muscleGroup" name = "muscleGroup">
+    <label for = "EXWeight"> Exercise Weight: </label>
+    <input type = "text" id = "EXWeight" name = "EXWeight">
+    <label for = "number"> Sets: </label>
+    <input type = "text" id = "number" name = "number">
+    <label for = "Sets"> Reps: </label>
+    <input type = "text" id = "Sets" name = "Sets"><br>
+    <label for = "restTime"> Rest Time: </label>
+    <input type = "text" id = "restTime" name = "restTime">
+    <label for = "EXintensity"> Exercise Intensity: </label>
+    <input type = "text" id = "EXintensity" name = "EXintensity"> 
+
+    <button type = "submit" name="update" value="updateExercise"> Update</button></br>    
+</form>
+
+<form action="/delete" method="POST"> 
+    <h3> Delete Exercise</h3>
+    <label for = "exName"> Exercise Name: </label> 
+    <input type = "text" id = "exName" name = "exName">
+    <button type = "submit" name="update" value="deleteExercise"> Delete</button></br>
+</form>
+
+
+
+
+
+<!-- <form>
+    <br> <button type = "submit"> Update</button></br>
+
+</form>   -->
+<!-- <button type = "button"> Back</button> </br>  -->
+</body>
+</html>

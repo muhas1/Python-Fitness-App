@@ -38,9 +38,32 @@ def getNameFromUser(username):
     closeConnect()
     return returnValue
 
+def updateTrainee(original, email,password,first,last,height,weight,trainer):
+    c.execute("""UPDATE trainee SET email = (?), password = (?), Fname = (?), Lname = (?),
+    height = (?), weight = (?), trainerID = (?) WHERE email = (?)""", 
+    [email,password,first,last,height,weight,trainer,original])
+    closeConnect()
+
+def updateMeal(protein, calories, carbs, fat, Trainer, mealName,mealID):
+    c.execute("""UPDATE meal SET protein = (?), calories = (?), carbs = (?), fat = (?), TR_userID = (?), mealName = (?) WHERE meaLID == (?)""", 
+    [protein,calories,carbs,fat,Trainer,mealName,mealID])
+    closeConnect()
+
+def deleteMeal(mealID):
+    c.execute("DELETE FROM meal WHERE mealID == (?)",[mealID])
+    closeConnect()
+
+def deleteExercise(exerciseName):
+    c.execute("DELETE FROM exercise WHERE exName == (?)",[exerciseName])
+    closeConnect()
+
+def updateExercise(name,group,weight,setS,reps,rest,intensity):
+    c.execute("""UPDATE exercise SET muscleGroup = (?), EXWeight = (?), number = (?), reps = (?), restTime = (?),
+    EXIntensity = (?) WHERE exName == (?)""", [group,weight,setS,reps,rest,intensity,name])
+    closeConnect()
+
 def closeConnect():
     connection.commit()
 
-# if __name__ == "__main__":
-#     a = getNameFromUser("alex@gym.com")
-#     print(a[0][7])
+if __name__ == "__main__":
+    updateExercise("Muscle Up",'Arms',0,5,6,5,9)
