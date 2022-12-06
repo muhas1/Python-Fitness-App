@@ -26,5 +26,21 @@ def addMeal(mealID,calories,protein,carbs,fat,TRUserID):
     )
     closeConnect()
 
+def addExercise(exName,muscleGroup,EXWeight,number,reps,restTime,EXintensity):
+    c.execute("INSERT INTO exercise(exName,muscleGroup,EXWeight,number,reps,restTime,EXintensity) VALUES (?,?,?,?,?,?,?)", 
+        [exName,muscleGroup,EXWeight,number,reps,restTime,EXintensity]
+    )
+    closeConnect()
+
+def getNameFromUser(username):
+    c.execute("SELECT * FROM trainee WHERE email == (?)",[username])
+    returnValue = c.fetchall()
+    closeConnect()
+    return returnValue
+
 def closeConnect():
     connection.commit()
+
+# if __name__ == "__main__":
+#     a = getNameFromUser("alex@gym.com")
+#     print(a[0][7])
